@@ -1,5 +1,6 @@
 const tailwindcss = require("tailwindcss");
 const atImport = require("postcss-import");
+const scss = require("postcss-scss");
 const postcss = require("postcss");
 const CleanCSS = require("clean-css");
 const minimatch = require("minimatch")
@@ -83,6 +84,7 @@ const compileTailwind = async (options) => {
   try {
     const content = readFileSync(options.entry, "utf-8");
     result = await postcss()
+      .use(scss())
       .use(atImport())
       .use(tailwindcss(tailwindConfig))
       .process(content, { from: options.entry });

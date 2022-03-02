@@ -13,7 +13,9 @@
     "css.escape": "^1.5.1",
     "fs-extra": "^9.0.1",
     "minimatch": "^3.0.4",
-    "postcss-import": "^14.0.2"
+    "postcss": "^8.4.7",
+    "postcss-import": "^14.0.2",
+    "postcss-scss": "^4.0.3"
   },
   "peerDependencies": {
     "autoprefixer": "^10.0.2",
